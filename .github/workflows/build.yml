@@ -20,6 +20,6 @@ jobs:
           runuser -u xundao -- bash -c "makepkg -s -f --noconfirm"
       - uses: actions/upload-artifact@v3
         with:
-          name: archiso
+          name: picom
           path: ./
 

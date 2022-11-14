@@ -1,0 +1,22 @@
+name: ci
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: archlinux
+      options: --privileged
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          pacman -Syu --noconfirm
+          pacman -S --noconfirm makepkg base-devel git
+          makepkg -s -f --noconfirm
+      # - uses: actions/upload-artifact@v3
+      #   with:
+      #     name: archiso
+      #     path: out/
+

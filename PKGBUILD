@@ -2,7 +2,7 @@
 # Contributor: OK100 <ok100 at lavabit dot com>
 # Contributor: Valère Monseur <valere dot monseur at ymail dot com>
 
-pkgname=picom-master
+pkgname=picom
 _gitname=picom
 pkgver=1430_8.rc2.21.gfd6ff82_2020.06.06
 pkgrel=1
@@ -20,7 +20,7 @@ optdepends=('dbus:          To control picom via D-Bus'
 provides=('compton' 'compton-git' 'picom')
 conflicts=('compton' 'compton-git' 'picom')
 replaces=('compton-git')
-source=(git+"https://github.com/dccsillag/${_gitname}.git#branch=master")
+source=(git+"https://github.com/dccsillag/${_gitname}.git#branch=next")
 md5sums=("SKIP")
 
 pkgver() {

@@ -2,13 +2,13 @@
 # Contributor: OK100 <ok100 at lavabit dot com>
 # Contributor: Valère Monseur <valere dot monseur at ymail dot com>
 
-pkgname=picom-git
+pkgname=picom-master
 _gitname=picom
 pkgver=1430_8.rc2.21.gfd6ff82_2020.06.06
 pkgrel=1
 pkgdesc="X compositor (fork of compton) (git-version)"
 arch=(i686 x86_64)
-url="https://github.com/yshui/${_gitname}"
+url="https://github.com/dccsillag/${_gitname}"
 license=('MIT' 'MPL2')
 depends=('libgl' 'libev' 'pcre' 'libx11' 'xcb-util-renderutil' 'libxcb' 'xcb-util-image' 'libxext'
          'pixman' 'libconfig' 'libdbus' 'hicolor-icon-theme')
@@ -20,7 +20,7 @@ optdepends=('dbus:          To control picom via D-Bus'
 provides=('compton' 'compton-git' 'picom')
 conflicts=('compton' 'compton-git' 'picom')
 replaces=('compton-git')
-source=(git+"https://github.com/yshui/${_gitname}.git#branch=next")
+source=(git+"https://github.com/dccsillag/${_gitname}.git#branch=master")
 md5sums=("SKIP")
 
 pkgver() {

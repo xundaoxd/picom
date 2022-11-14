@@ -14,7 +14,9 @@ jobs:
       - run: |
           pacman -Syu --noconfirm
           pacman -S --noconfirm base-devel git
-          makepkg -s -f --noconfirm
+          useradd -m -s /bin/bash -g wheel xundao
+          sed -E -i '/^#\s*%wheel.*NOPASSWD/{s/^#\s*//}' /etc/sudoers
+          runuser -u xundao -- bash -c "makepkg -s -f --noconfirm"
       # - uses: actions/upload-artifact@v3
       #   with:
       #     name: archiso
